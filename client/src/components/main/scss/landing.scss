@@ -1,0 +1,28 @@
+div.landing {
+    max-width: 100%;
+
+    div.split {
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        overflow: hidden;
+        div.text {
+            max-width: 400px;
+            padding: 50px;
+            background-color: black;
+            color: white;
+        }
+
+        div.frame {
+            img {
+
+                @media screen and (max-width: 1100px) {
+                    width: 40vw;
+                }
+                @media screen and (max-width: 800px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

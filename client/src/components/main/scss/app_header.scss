@@ -1,0 +1,54 @@
+header.app_header {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    
+    &::after {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        display: block;
+        content: "";
+        background: linear-gradient(to bottom, rgba(0,0,0,0.3),rgba(0,0,0,0.15), rgba(0,0,0,0.05), transparent, transparent);
+        z-index: -1;
+    }
+
+    div.navbar {
+        a.branding {
+            img {
+                position: absolute;
+                display: block;
+                width: 60px;
+                height: 60px;
+                top: 0px;
+                left: 10px;
+                
+            }
+
+            span.app_name {
+                margin-left: 70px;
+                color: white
+            }
+        }
+
+        nav.links {
+            @media screen and (max-width: 600px) {
+                display: none;
+            }
+            span.navbar-text {
+                padding-top: 0.3rem;
+                padding-bottom: 0.3rem;
+                background: white;
+                font-weight: bold;
+                border-radius: 25px;
+                cursor: pointer;
+                
+                &:not(:last-of-type) {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}

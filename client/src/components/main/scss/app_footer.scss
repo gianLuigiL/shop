@@ -1,0 +1,28 @@
+footer.app_footer {
+    margin-top: 20px;
+    padding: 40px;
+    background-color: black;
+    color: white;
+
+    div.footer_branding {
+        flex-basis: 100%;
+        text-align: center;
+
+        a {
+            font-size: 2em;
+
+            img {
+                width: 80px;
+            }
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 20px;
+
+        li {
+            margin-bottom: 5px;
+        }
+    }
+}
