@@ -1,0 +1,105 @@
+@import "../../../scss/variables";
+
+header.dashboard_header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 3;
+
+    div.navbar {
+        a.branding {
+            img {
+                position: absolute;
+                display: block;
+                width: 60px;
+                height: 60px;
+                top: 0px;
+                left: 20px;                
+            }
+
+            span.app_name {
+                margin-left: 70px;
+                color: black
+            }
+        }
+
+        nav.links {
+            @media screen and (max-width: 600px) {
+                display: none;
+            }
+            div.navbar-text {
+                position: relative;
+                font-weight: bold;
+                cursor: pointer;
+                
+                &:not(:last-of-type) {
+                    border-right: 2px solid black;
+                }
+
+                &:last-of-type {
+                    //Prevent the last dropdown from appearing outside of the screen
+                    div.dropdown {
+                        left: -50%;
+
+                        ul {
+                            &::after {
+                                left: 75%;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    div.dropdown {
+                        ul {
+                            display: flex;
+                        }
+                    }
+                }
+
+                div.dropdown {
+                    position: absolute;
+                    top: 95%;
+                    left: -25%;
+                    width: 150%;
+
+                    &:hover {
+                        ul {
+                            display: flex;
+                        }
+                    }
+
+                    ul {
+                        position: relative;
+                        display: none;
+                        border: 1px solid black;
+                        margin-top: 20px;
+                        padding: 10px;
+
+                        //The arrow of the dropdown
+                        &::after {
+                            position: absolute;
+                            width: 30px;
+                            height: 20px;
+                            top: -18px;
+                            left: 50%;
+                            transform: translate(-50%);
+                            content: url("../../../assets/images/icons/dropdown_arrow.svg");
+                        }
+
+                        li {
+                            white-space: nowrap;
+                            list-style-type: none;
+                            flex: 1 1 100%;
+
+                            a {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

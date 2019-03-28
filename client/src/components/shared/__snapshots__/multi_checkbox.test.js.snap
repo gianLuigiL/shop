@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiCheckbox Should render correctly with props 1`] = `
+<span
+  className="multi_checkbox_container horizontal"
+>
+  <span
+    className="multi_checkbox"
+    key="red"
+  >
+    <label
+      className="d-flex flex-wrap align-items-center justify-content-start"
+      htmlFor="red"
+    >
+      <input
+        defaultChecked=""
+        id="red"
+        name="red"
+        onChange={[Function]}
+        tabIndex="0"
+        type="checkbox"
+        value="red"
+      />
+      <span
+        className="custom_checkbox"
+      />
+      <span
+        className="text"
+      >
+        Red
+      </span>
+    </label>
+  </span>
+  <span
+    className="multi_checkbox"
+    key="green"
+  >
+    <label
+      className="d-flex flex-wrap align-items-center justify-content-start"
+      htmlFor="green"
+    >
+      <input
+        defaultChecked=""
+        id="green"
+        name="green"
+        onChange={[Function]}
+        tabIndex="0"
+        type="checkbox"
+        value="green"
+      />
+      <span
+        className="custom_checkbox"
+      />
+      <span
+        className="text"
+      >
+        Green
+      </span>
+    </label>
+  </span>
+</span>
+`;
+
+exports[`MultiCheckbox Should render correctly without props 1`] = `
+<span
+  className="multi_checkbox_container horizontal"
+/>
+`;

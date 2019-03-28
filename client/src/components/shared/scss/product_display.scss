@@ -1,0 +1,56 @@
+@import "../../../scss/variables";
+
+div.product_display_outer_container {
+    display: grid;
+    grid-template-rows: 50px auto;
+    align-self: stretch;
+
+        h2 {
+            margin-top: 0;
+        }
+
+        div.product_display_inner_container {
+            display: grid;
+            grid-template-areas: 
+            "photo photo photo photo"
+            "photo photo photo photo"
+            "photo photo photo photo"
+            "text text text text";
+            grid-template-columns: 25%;
+            grid-template-rows: 25%;
+            align-self: stretch;
+
+            div.photos {
+                grid-area: photo;
+                display: grid;
+                justify-content: stretch;
+                justify-items: stretch;
+                align-items: stretch;
+
+                img {
+                    object-fit: cover;
+                }
+            }
+            div.text {
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr;
+                grid-area: text;
+
+                div.description {
+                    grid-row-start: 1;
+                    grid-row-end: 1;
+                    grid-column:1 1;
+                }
+                div.frame_material {
+                    grid-row-start: 1;
+                    grid-row-end: 1;
+                    grid-column:2 2;
+                }
+                div.description {
+                    grid-row-start: 1;
+                    grid-row-end: 1;
+                    grid-column:3 3;
+                }
+            }
+        }
+}

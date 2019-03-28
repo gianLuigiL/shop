@@ -1,0 +1,68 @@
+@import "../../../scss/variables";
+
+fieldset.mono_checkbox {
+    legend {
+        font-size: 1em;
+        font-weight: bold;
+        color: $main_color;
+    }
+    label {
+        margin-bottom: 0;
+        cursor: pointer;
+
+        input[type=checkbox] {
+            //Hides it instead of display none so it can be focused
+            opacity: 0;
+            width: 0px;
+            height: 0px;
+            overflow: hidden;
+        }
+
+        input:checked + span.custom_checkbox {
+            background-color: $main_color;
+
+            &::after {
+                transform: translate(-50%,-50%) scale(1);
+            }
+        }
+        input:disabled + span.custom_checkbox {
+            background: grey;
+        }
+
+        input:focus ~ span.text {
+            box-shadow: 0px 0px 0px 2px $main_color;
+        }
+
+        span.custom_checkbox {
+            position: relative;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: lighten($main_color, 25%);
+            border: 1px solid black;
+            z-index: 1;
+            transition: background-color 0.3s;
+
+            &::after {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%) scale(0);
+                width: 100%;
+                height: 100%;
+                background:url("../../../assets/images/icons/checkmark.svg"); 
+                background-size: 100% 100%;
+                content: "";
+                z-index: 5;
+                transition: transform 0.3s;
+            }
+        }
+
+        span.text {
+            font-weight: 500;
+            margin-left: 10px;
+            padding: 0px 5px;
+            color: black;
+        }
+    }
+}

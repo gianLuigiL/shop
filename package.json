@@ -3,12 +3,25 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client": "cd client && npm install && npm run dev",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"nodemon server.js\" \"npm run client\" --kill-others-on-fail",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^4.11.0"
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.4",
+    "express": "^4.16.4",
+    "mongodb": "^3.2.2",
+    "multer": "^1.4.1",
+    "node-sass": "^4.11.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.10"
   }
 }
